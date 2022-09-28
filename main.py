@@ -15,18 +15,18 @@ def req_one():
     results = requests.get('https://bonjarber.com/', headers=headers)
     return results.text
 
-@app.route('/req_2')
-def req_two():
-    # hardcoded secret in request
-    results = requests.get('https://bonjarber.com/', auth=('admin','password'))
-    return results.text
+# @app.route('/req_2')
+# def req_two():
+#     # hardcoded secret in request
+#     results = requests.get('https://bonjarber.com/', auth=('admin','password'))
+#     return results.text
 
-@app.route('/req_3')
-def req_three():
-    # config secret in obvious header
-    headers = {'X-API-KEY' : config.SOURCE_7}
-    results = requests.get('https://bonjarber.com/', headers=headers)
-    return results.text
+# @app.route('/req_3')
+# def req_three():
+#     # config secret in obvious header
+#     headers = {'X-API-KEY' : config.SOURCE_7}
+#     results = requests.get('https://bonjarber.com/', headers=headers)
+#     return results.text
 
 @app.route('/req_4')
 def req_four():
